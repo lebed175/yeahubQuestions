@@ -1,0 +1,31 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../../shared//assets/fonts/Manrope-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Manrope';
+    background-color: #f4f4f4;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1220px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+}

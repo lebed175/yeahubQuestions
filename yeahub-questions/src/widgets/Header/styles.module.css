@@ -1,0 +1,31 @@
+.header {
+    background-color: white;
+    padding: 0 20px;
+    padding: 16px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.navigation {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.auth {
+    display: flex;
+    gap: 20px;
+}

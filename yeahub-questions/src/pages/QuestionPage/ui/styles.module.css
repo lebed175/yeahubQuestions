@@ -1,0 +1,214 @@
+.main {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.linkImg {
+    cursor: pointer;
+}
+
+.linkText {
+    color: #6A0BFF;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.title {
+    display: flex;
+    gap: 15px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.titleImg {
+    border-radius: 12px;
+}
+
+.titleItem {
+    padding: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #303030;
+    margin-top: 0;
+}
+
+.titleDescription {
+    font-size: 16px;
+    font-weight: 500;
+    color: #474747;
+}
+
+.shortAnswer {
+    background-color: white;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.shortAnswerTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #303030;
+    margin-top: 0;
+}
+
+.shortAnswerText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #303030;
+}
+
+.longAnswer {
+    max-height: 300px;
+    overflow: hidden;
+    background-color: white;
+    padding: 24px 24px 0 24px;
+    border-radius: 24px;
+}
+
+.longAnswerFull {
+    max-height: 100%;
+    overflow: unset;
+    background-color: white;
+    padding: 24px 24px 0 24px;
+    border-radius: 24px;
+}
+
+.longAnswerTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #303030;
+    margin-top: 0;
+}
+
+.longAnswerText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #303030;
+}
+
+.moreInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.moreInfoText {
+    color: #6A0BFF;
+    margin: 0;
+}
+
+.sidebar {
+    min-width: 300px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.levelText {
+    color: #474747;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    gap: 40px;
+}
+
+.infoText {
+    padding: 5px;
+    background-color: #F8F8F8;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+}
+
+.infoNumber {
+    max-width: 130px;
+    padding: 2px 4px;
+    color: white;
+    background-color: #6A0BFF;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+}
+
+.skillsText {
+    color: #474747;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skillsItem {
+    border: 1px solid #6A0BFF;
+    border-radius: 12px;
+    padding: 10px 12px;
+    color: #303030;
+    font-size: 16px;
+    text-align: center;
+}
+
+.keywords {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+}
+
+.keywordsText {
+    color: #474747;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.keywordsItem {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+    color: #6A0BFF;
+}

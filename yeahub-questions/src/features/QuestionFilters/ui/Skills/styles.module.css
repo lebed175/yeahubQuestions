@@ -1,0 +1,32 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.text {
+    color: #474747;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skillsButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.moreOption {
+    color: #5509CC;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+}

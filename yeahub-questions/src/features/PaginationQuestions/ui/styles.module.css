@@ -1,0 +1,17 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paginationButtonArrow {
+    background-color: white;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
