@@ -25,7 +25,7 @@ export const questionsApi = baseApi.injectEndpoints({
             queryState.questionSkills?.length === 0
               ? undefined
               : queryState.questionSkills,
-          specializations:
+          specialization:
             queryState.questionSpecializations?.length === 0
               ? undefined
               : queryState.questionSpecializations,
