@@ -17,10 +17,10 @@ export const QuestionItem = ({ question }: Props) => {
 
   return (
     <div className={styles.question}>
-      <li className={styles.item}>
+      <div className={styles.item}>
         <p className={styles.text}>{question.title}</p>
         <Toggler isOpen={isOpen} handleClick={toggle}></Toggler>
-      </li>
+      </div>
 
       <div
         className={`${styles.hidden} ${isOpen ? styles.open : styles.closed}`}

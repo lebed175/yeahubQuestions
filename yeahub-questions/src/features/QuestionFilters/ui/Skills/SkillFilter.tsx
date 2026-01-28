@@ -5,8 +5,7 @@ import type { QueryState } from "@/entites/Questions/model/types";
 import { useGetSkillsQuery } from "@/entites/Skills/api/skillsApi";
 import { Button } from "@/shared/ui/Button/Button";
 import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
-import { useAppDispatch } from "@/shared/libs/hooks";
-import { setFilters } from "@/entites/Questions/model/filtersSlice";
+import { useToggleFilters } from "../../hook/useToggleFilter";
 
 interface Props {
   queryState: QueryState;
@@ -14,7 +13,9 @@ interface Props {
 export const SkillFilter = ({ queryState }: Props) => {
   const [limit, setLimit] = useState(10);
   const { data: skills, isLoading } = useGetSkillsQuery(limit);
-  const dispatch = useAppDispatch();
+  const toggleFilters = useToggleFilters({
+    filterName: "questionSkills",
+  });
 
   return (
     <div className={styles.skills}>
@@ -33,13 +34,7 @@ export const SkillFilter = ({ queryState }: Props) => {
                 }
                 size="medium"
                 onClick={() => {
-                  const current = queryState.questionSkills ?? [];
-
-                  const next = current.includes(skill.id)
-                    ? current.filter((id) => id !== skill.id)
-                    : [...current, skill.id];
-
-                  dispatch(setFilters({ questionSkills: next }));
+                  toggleFilters(skill.id, queryState.questionSkills ?? []);
                 }}
               >
                 {skill.title}

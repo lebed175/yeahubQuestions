@@ -18,7 +18,9 @@ export const QuestionsList = ({ questions, isLoading }: Props) => {
       ) : (
         <ul className={styles.list}>
           {questions?.data.map((question) => (
-            <QuestionItem key={question.id} question={question}></QuestionItem>
+            <li className={styles.item} key={question.id}>
+              <QuestionItem question={question}></QuestionItem>
+            </li>
           ))}
         </ul>
       )}

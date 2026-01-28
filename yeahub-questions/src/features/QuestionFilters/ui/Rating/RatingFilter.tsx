@@ -1,8 +1,7 @@
-import { setFilters } from "@/entites/Questions/model/filtersSlice";
 import styles from "./styles.module.css";
 
 import type { QueryState } from "@/entites/Questions/model/types";
-import { useAppDispatch } from "@/shared/libs/hooks";
+import { useToggleFilters } from "../../hook/useToggleFilter";
 import { Button } from "@/shared/ui/Button/Button";
 
 interface Props {
@@ -11,8 +10,9 @@ interface Props {
 
 export const RatingFilter = ({ queryState }: Props) => {
   const ratingVariants = [1, 2, 3, 4, 5];
-
-  const dispatch = useAppDispatch();
+  const toggleFilters = useToggleFilters({
+    filterName: "rate",
+  });
 
   return (
     <div className={styles.rating}>
@@ -24,15 +24,7 @@ export const RatingFilter = ({ queryState }: Props) => {
             size="small"
             key={index}
             classCustom={queryState.rate?.includes(variant) ? "active" : ""}
-            onClick={() => {
-              const current = queryState.rate ?? [];
-
-              const next = current.includes(variant)
-                ? current.filter((ratingItem) => ratingItem !== variant)
-                : [...current, variant];
-
-              dispatch(setFilters({ rate: next }));
-            }}
+            onClick={() => toggleFilters(variant, queryState.rate ?? [])}
           >
             {variant}
           </Button>
