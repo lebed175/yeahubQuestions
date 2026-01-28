@@ -5,8 +5,7 @@ import { useGetSpecializationsQuery } from "@/entites/Specializations/api/specia
 
 import { Button } from "@/shared/ui/Button/Button";
 import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
-import { useAppDispatch } from "@/shared/libs/hooks";
-import { setFilters } from "@/entites/Questions/model/filtersSlice";
+import { useToggleFilters } from "../../hook/useToggleFilter";
 import type { QueryState } from "@/entites/Questions/model/types";
 
 interface Props {
@@ -14,11 +13,12 @@ interface Props {
 }
 
 export const SpecializationFilter = ({ queryState }: Props) => {
-  const dispatch = useAppDispatch();
-
   const [limit, setLimit] = useState(5);
   const { data: specializations, isLoading } =
     useGetSpecializationsQuery(limit);
+  const toggleFilters = useToggleFilters({
+    filterName: "questionSpecializations",
+  });
 
   return (
     <div className={styles.specializations}>
@@ -38,13 +38,10 @@ export const SpecializationFilter = ({ queryState }: Props) => {
                   : ""
               }
               onClick={() => {
-                const current = queryState.questionSpecializations ?? [];
-
-                const next = current.includes(specialization.id)
-                  ? current.filter((id) => id !== specialization.id)
-                  : [...current, specialization.id];
-
-                dispatch(setFilters({ questionSpecializations: next }));
+                toggleFilters(
+                  specialization.id,
+                  queryState.questionSpecializations ?? [],
+                );
               }}
             >
               {specialization.title}
